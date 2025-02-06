@@ -1,7 +1,8 @@
+/* Algemene styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: linear-gradient(135deg, #1a1a2e, #3a0ca3);
+    color: #eee;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,51 +11,71 @@ body {
     height: 100vh;
 }
 
+/* Container voor alle content */
 .container {
     text-align: center;
     max-width: 600px;
 }
 
+/* Titel */
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    background: -webkit-linear-gradient(left, #ff00ff, #ffccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+/* Project cards */
 .project-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Projectafbeelding */
 .project-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
+/* Projectnaam */
 .project-card h2 {
     margin: 15px 0 10px;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
+/* Beschrijving */
 .project-card p {
     font-size: 1em;
-    color: #666;
+    color: #ddd;
 }
 
+/* GitHub-knop */
 .project-card a {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #007bff;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #d400ff, #8c52ff);
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
+/* Hover effect voor knop */
 .project-card a:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #8c52ff, #d400ff);
+    box-shadow: 0 0 10px #d400ff;
 }
