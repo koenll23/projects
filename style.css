@@ -58,10 +58,11 @@ h1 {
     border-radius: 10px;
 }
 
-/* Projectnaam */
+/* Projectnaam altijd wit */
 .project-card h2 {
     margin: 15px 0 10px;
     font-size: 1.8em;
+    color: #fff; /* Altijd wit */
 }
 
 /* Beschrijving */
@@ -73,4 +74,25 @@ h1 {
 /* Knop styling, maar nu onzichtbaar */
 .project-card a .button {
     display: none;
+}
+
+/* Footer/credits styling */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1em;
+    color: #bbb;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer links */
+.footer a {
+    color: #d400ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
