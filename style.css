@@ -30,6 +30,7 @@ nav ul li {
     margin: 0 15px;
 }
 
+/* Standaard navigatieknop */
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -37,11 +38,20 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* Hover effect */
 nav ul li a:hover {
     color: #ff00ff;
 }
 
-/* Container voor de inhoud */
+/* Actieve pagina indicator */
+nav ul li a.active {
+    color: #ffccff;
+    font-weight: bold;
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 3px;
+}
+
+/* Container */
 .container {
     text-align: center;
     max-width: 900px;
@@ -57,7 +67,7 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Project card styling */
+/* Project card */
 .project-card {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -71,13 +81,13 @@ h1 {
     margin: 20px auto;
 }
 
-/* Hover effect voor de projectkaarten */
+/* Hover effect */
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Project afbeelding (volledige breedte) */
+/* Project afbeelding */
 .project-card img {
     width: 100%;
     height: auto;
@@ -85,40 +95,35 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* Projectnaam altijd wit */
+/* Projecttitel */
 .project-card h2 {
     margin: 15px 0 10px;
     font-size: 1.8em;
-    color: #fff; /* Altijd wit */
+    color: #fff;
 }
 
-/* Beschrijving onder de projectnaam */
+/* Projectbeschrijving */
 .project-card p {
     font-size: 1.1em;
     color: #ddd;
 }
 
-/* Footer stijl (indien nodig later toegevoegd) */
-footer {
-    text-align: center;
-    margin-top: 40px;
+/* Placeholder tekst voor lege pagina's */
+.empty-content {
+    font-size: 1.5em;
     color: #bbb;
+    margin-top: 50px;
+    text-align: center;
 }
 
-footer p {
-    font-size: 0.9em;
-}
-
-/* Kleine responsive tweaks */
+/* Responsive */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
     }
-
     nav ul li {
         margin: 0 8px;
     }
-
     .project-card {
         width: 100%;
     }
