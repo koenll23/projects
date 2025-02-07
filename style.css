@@ -1,79 +1,40 @@
-/* Algemene styling */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #3a0ca3);
-    color: #eee;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 150vh; /* Maakt de pagina langer */
-}
-
-/* Container */
-.container {
-    text-align: center;
-    max-width: 600px;
-    margin-top: 50px;
-}
-
-/* Titel */
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    background: -webkit-linear-gradient(left, #ff00ff, #ffccff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Project card */
-.project-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-/* Hele project-card is een knop */
-.project-card a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Hover effect */
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Project afbeelding (volledige breedte) */
-.project-card img {
+/* Navigatiebalk */
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Projectnaam altijd wit */
-.project-card h2 {
-    margin: 15px 0 10px;
-    font-size: 1.8em;
-    color: #fff; /* Altijd wit */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-/* Beschrijving */
-.project-card p {
-    font-size: 1em;
-    color: #ddd;
+nav ul li {
+    margin: 0 15px;
 }
 
-/* Knop styling, maar nu onzichtbaar */
-.project-card a .button {
-    display: none;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Footer (verwijderd) */
+nav ul li a:hover {
+    color: #ffccff;
+}
+
+/* Zorg ervoor dat de content niet verborgen wordt onder de navbar */
+body {
+    padding-top: 60px;
+}
