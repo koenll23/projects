@@ -24,5 +24,18 @@
         <p class="empty-content">Hm, it seems like there's no content to view here yet.</p>
     </div>
 
+    <!-- JavaScript om fallback-tekst te verbergen als er projecten zijn -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let projects = document.getElementById("projects");
+            let emptyText = document.getElementById("empty-content");
+
+            // Verberg de fallback-tekst als er projecten zijn
+            if (projects.children.length > 0) {
+                emptyText.style.display = "none";
+            }
+        });
+    </script>
+
 </body>
 </html>
