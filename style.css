@@ -70,10 +70,17 @@ nav {
   letter-spacing: 0.5px;
 }
 
+/* Fixed navigation buttons - horizontal layout */
 nav ul {
   list-style-type: none;
   display: flex;
+  flex-direction: row;
   gap: var(--spacing-md);
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline-block;
 }
 
 nav ul li a {
@@ -85,6 +92,7 @@ nav ul li a {
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: 20px;
   position: relative;
+  display: inline-block;
 }
 
 nav ul li a:hover {
@@ -150,10 +158,10 @@ h1::after {
   border-radius: 2px;
 }
 
-/* Projects Grid */
+/* Projects Grid - 3 columns layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
   margin: var(--spacing-xl) 0;
 }
@@ -226,26 +234,6 @@ h1::after {
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 0.8rem;
-}
-
-/* Empty Content */
-.empty-content {
-  text-align: center;
-  padding: var(--spacing-xl);
-  color: var(--text-muted);
-  background: var(--card-bg);
-  border-radius: var(--border-radius);
-  margin: var(--spacing-xl) 0;
-}
-
-.empty-content i {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-md);
-  opacity: 0.6;
-}
-
-.empty-content p {
-  font-size: 1.2rem;
 }
 
 /* Footer */
@@ -343,19 +331,24 @@ footer {
   :root {
     --container-width: 90%;
   }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-  
   h1 {
     font-size: 2.5rem;
   }
   
   .nav-container {
-    flex-direction: column;
+    flex-direction: row; /* Keep horizontal on smaller screens */
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  nav ul {
     gap: var(--spacing-sm);
   }
   
